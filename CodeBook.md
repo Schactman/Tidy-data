@@ -5,8 +5,8 @@
    values from 1 to 30
 
 #####Activity, integer
-   activity number
-   -1 = Walking
+   activity number <\br>
+   -1 = Walking <br>
    -2 = Walking up stairs
    -3 = Walking down stairs
    -4 = Sitting
