@@ -14,7 +14,7 @@ if (!file.exists("data")) {
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileUrl, destfile = ".//data//UCI HAR Dataset.zip")
 
-unzip(zipfile=".//data/UCI HAR Dataset.zip", exdir=".//dat")
+unzip(zipfile=".//data//UCI HAR Dataset.zip", exdir=".//dat")
 
 dateDownloaded <- date()
 dateDownloaded
