@@ -17,4 +17,5 @@ The script does the following:
 2. Imports in the X_test.txt and X_train.txt data adding column names
 3. Binds the activities (names and numbers) and subject numbers to the data
 4. Binds the test and train data together and selects only the mean or standard deviation columns
+
 5. Computes the means of each activity for each subjects and writes that to tidy.csv
