@@ -1,261 +1,275 @@
-##CodeBook for tidy.csv
+##CodeBook for tidy.txt
 
-######Subject, integer
-   subject number
-   values from 1 to 30
+The tidy.txt file was created from accelerometer data collected from subjects with Samsung Galaxy S smartphones.  
+The raw data is located here:
 
-######Activity, integer
-   activity number <br>
-   1 = Walking <br>
-   2 = Walking up stairs <br>
-   3 = Walking down stairs <br>
-   4 = Sitting <br>
-   5 = Standing <br>
-   6 = Laying
+    https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+	
+The script run_analysis.R creates the TXT file tidy.txt.  
+The script does the following:  
+1. Imports the variable names, activities (names and numbers), and subject numbers.
+2. Imports in the X_test.txt and X_train.txt data adding column names
+3. Binds the activities (names and numbers) and subject numbers to the data
+4. Binds the test and train data together and selects only the mean or standard deviation columns
+5. Computes the means of each activity for each subjects and writes that to tidy.txt  
 
-######ActivityName, character
-   activity names <br>
-   Walking <br>
-   Walking up stairs <br>
-   Walking down stairs <br>
-   Sitting <br>
-   Standing <br>
-   Laying 
+##Variables
 
-tBodyAccmeanX, numeric  
-   Mean value for tBodyAccmeanX
+###### Subject, integer
+   subject number  
+   values from 1 to 30  
 
-tBodyAccmeanY, numeric  
-   Mean value for tBodyAccmeanY
+###### Activity, integer  
+   activity number <br>  
+   1 = Walking <br>  
+   2 = Walking up stairs <br>  
+   3 = Walking down stairs <br>  
+   4 = Sitting <br>  
+   5 = Standing <br>  
+   6 = Laying  
+
+###### ActivityName, character  
+   activity names <br>  
+   Walking <br>  
+   Walking up stairs <br>  
+   Walking down stairs <br>  
+   Sitting <br>  
+   Standing <br>  
+   Laying   
+
+###### tBodyAccmeanX, numeric  
+&nbsp;&nbsp;&nbsp; Mean value for tBodyAccmeanX  
+
+###### tBodyAccmeanY, numeric  
+&nbsp;&nbsp;&nbsp; Mean value for tBodyAccmeanY  
 
 ###### tBodyAccmeanZ, numeric  
-   Mean value for tBodyAccmeanZ
+&nbsp;&nbsp;&nbsp; Mean value for tBodyAccmeanZ  
 
 ###### tBodyAccstdX, numeric  
-   Mean value for tBodyAccstdX
+&nbsp;&nbsp;&nbsp; Mean value for tBodyAccstdX  
 
 ###### tBodyAccstdY, numeric  
-   Mean value for tBodyAccstdY
+&nbsp;&nbsp;&nbsp; Mean value for tBodyAccstdY  
 
 ###### tBodyAccstdZ, numeric  
-   Mean value for tBodyAccstdZ
+&nbsp;&nbsp;&nbsp; Mean value for tBodyAccstdZ  
 
 ###### tGravityAccmeanX, numeric  
-   Mean value for tGravityAccmeanX
+&nbsp;&nbsp;&nbsp; Mean value for tGravityAccmeanX  
 
 ###### tGravityAccmeanY, numeric  
-   Mean value for tGravityAccmeanY
+&nbsp;&nbsp;&nbsp; Mean value for tGravityAccmeanY  
 
 ###### tGravityAccmeanZ, numeric  
-   Mean value for tGravityAccmeanZ
+&nbsp;&nbsp;&nbsp; Mean value for tGravityAccmeanZ  
 
 ###### tGravityAccstdX, numeric  
-   Mean value for tGravityAccstdX
+&nbsp;&nbsp;&nbsp; Mean value for tGravityAccstdX  
 
 ###### tGravityAccstdY, numeric  
-   Mean value for tGravityAccstdY
+&nbsp;&nbsp;&nbsp; Mean value for tGravityAccstdY  
 
 ###### tGravityAccstdZ, numeric  
-   Mean value for tGravityAccstdZ
+&nbsp;&nbsp;&nbsp; Mean value for tGravityAccstdZ  
 
 ###### tBodyAccJerkmeanX, numeric  
-   Mean value for tBodyAccJerkmeanX
+&nbsp;&nbsp;&nbsp; Mean value for tBodyAccJerkmeanX  
 
 ###### tBodyAccJerkmeanY, numeric  
-   Mean value for tBodyAccJerkmeanY
+&nbsp;&nbsp;&nbsp; Mean value for tBodyAccJerkmeanY  
 
 ###### tBodyAccJerkmeanZ, numeric  
-   Mean value for tBodyAccJerkmeanZ
+&nbsp;&nbsp;&nbsp; Mean value for tBodyAccJerkmeanZ  
 
 ###### tBodyAccJerkstdX, numeric  
-   Mean value for tBodyAccJerkstdX
+&nbsp;&nbsp;&nbsp; Mean value for tBodyAccJerkstdX  
 
 ###### tBodyAccJerkstdY, numeric  
-   Mean value for tBodyAccJerkstdY
+&nbsp;&nbsp;&nbsp; Mean value for tBodyAccJerkstdY  
 
 ###### tBodyAccJerkstdZ, numeric  
-   Mean value for tBodyAccJerkstdZ
+&nbsp;&nbsp;&nbsp; Mean value for tBodyAccJerkstdZ  
 
 ###### tBodyGyromeanX, numeric  
-   Mean value for tBodyGyromeanX
+&nbsp;&nbsp;&nbsp; Mean value for tBodyGyromeanX  
 
 ###### tBodyGyromeanY, numeric  
-   Mean value for tBodyGyromeanY
+&nbsp;&nbsp;&nbsp; Mean value for tBodyGyromeanY  
 
 ###### tBodyGyromeanZ, numeric  
-   Mean value for tBodyGyromeanZ
+&nbsp;&nbsp;&nbsp; Mean value for tBodyGyromeanZ  
 
 ###### tBodyGyrostdX, numeric  
-   Mean value for tBodyGyrostdX
+&nbsp;&nbsp;&nbsp; Mean value for tBodyGyrostdX  
 
 ###### tBodyGyrostdY, numeric  
-   Mean value for tBodyGyrostdY
+&nbsp;&nbsp;&nbsp; Mean value for tBodyGyrostdY  
 
 ###### tBodyGyrostdZ, numeric  
-   Mean value for tBodyGyrostdZ
+&nbsp;&nbsp;&nbsp; Mean value for tBodyGyrostdZ  
 
 ###### tBodyGyroJerkmeanX, numeric  
-   Mean value for tBodyGyroJerkmeanX
-
+&nbsp;&nbsp;&nbsp; Mean value for tBodyGyroJerkmeanX  
+   
 ###### tBodyGyroJerkmeanY, numeric  
-  Mean value for tBodyGyroJerkmeanY
+  Mean value for tBodyGyroJerkmeanY  
 
 ###### tBodyGyroJerkmeanZ, numeric  
-   Mean value for tBodyGyroJerkmeanZ
+&nbsp;&nbsp;&nbsp; Mean value for tBodyGyroJerkmeanZ 
 
 ###### tBodyGyroJerkstdX, numeric  
-   Mean value for tBodyGyroJerkstdX
+&nbsp;&nbsp;&nbsp; Mean value for tBodyGyroJerkstdX  
 
 ###### tBodyGyroJerkstdY, numeric  
-   Mean value for tBodyGyroJerkstdY
+&nbsp;&nbsp;&nbsp; Mean value for tBodyGyroJerkstdY  
 
 ###### tBodyGyroJerkstdZ, numeric  
-   Mean value for tBodyGyroJerkstdZ
+&nbsp;&nbsp;&nbsp; Mean value for tBodyGyroJerkstdZ  
 
 ###### tBodyAccMagmean, numeric  
-   Mean value for tBodyAccMagmean
+&nbsp;&nbsp;&nbsp; Mean value for tBodyAccMagmean  
 
 ###### tBodyAccMagstd, numeric  
-   Mean value for tBodyAccMagstd
+&nbsp;&nbsp;&nbsp; Mean value for tBodyAccMagstd  
 
 ###### tGravityAccMagmean, numeric  
-   Mean value for tGravityAccMagmean
+&nbsp;&nbsp;&nbsp; Mean value for tGravityAccMagmean  
 
 ###### tGravityAccMagstd, numeric  
-   Mean value for tGravityAccMagstd
+&nbsp;&nbsp;&nbsp; Mean value for tGravityAccMagstd  
 
 ###### tBodyAccJerkMagmean, numeric  
-   Mean value for tBodyAccJerkMagmean
+&nbsp;&nbsp;&nbsp; Mean value for tBodyAccJerkMagmean  
 
 ###### tBodyAccJerkMagstd, numeric  
-   Mean value for tBodyAccJerkMagstd
+&nbsp;&nbsp;&nbsp; Mean value for tBodyAccJerkMagstd  
 
 ###### tBodyGyroMagmean, numeric  
-   Mean value for tBodyGyroMagmean
+&nbsp;&nbsp;&nbsp; Mean value for tBodyGyroMagmean  
 
 ###### tBodyGyroMagstd, numeric  
-   Mean value for tBodyGyroMagstd
+&nbsp;&nbsp;&nbsp; Mean value for tBodyGyroMagstd  
 
 ###### tBodyGyroJerkMagmean, numeric  
-   Mean value for tBodyGyroJerkMagmean
+&nbsp;&nbsp;&nbsp; Mean value for tBodyGyroJerkMagmean  
 
 ###### tBodyGyroJerkMagstd, numeric  
-   Mean value for tBodyGyroJerkMagstd
+&nbsp;&nbsp;&nbsp; Mean value for tBodyGyroJerkMagstd  
 
 ###### fBodyAccmeanX, numeric  
-   Mean value for fBodyAccmeanX
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccmeanX  
 
 ###### fBodyAccmeanY, numeric  
-   Mean value for fBodyAccmeanY
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccmeanY  
 
 ###### fBodyAccmeanZ, numeric  
-   Mean value for fBodyAccmeanZ
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccmeanZ  
 
 ###### fBodyAccstdX, numeric  
-   Mean value for fBodyAccstdX
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccstdX  
 
 ###### fBodyAccstdY, numeric  
-  Mean value for fBodyAccstdY
+  Mean value for fBodyAccstdY  
 
 ###### fBodyAccstdZ, numeric  
-   Mean value for fBodyAccstdZ
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccstdZ  
 
 ###### fBodyAccmeanFreqX, numeric  
-   Mean value for fBodyAccmeanFreqX
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccmeanFreqX  
 
 ###### fBodyAccmeanFreqY, numeric  
-   Mean value for fBodyAccmeanFreqY
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccmeanFreqY  
 
 ###### fBodyAccmeanFreqZ, numeric  
-   Mean value for fBodyAccmeanFreqZ
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccmeanFreqZ  
 
 ###### fBodyAccJerkmeanX, numeric  
-   Mean value for fBodyAccJerkmeanX
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccJerkmeanX  
 
 ###### fBodyAccJerkmeanY, numeric  
-   Mean value for fBodyAccJerkmeanY
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccJerkmeanY  
 
 ###### fBodyAccJerkmeanZ, numeric  
-   Mean value for fBodyAccJerkmeanZ
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccJerkmeanZ  
 
 ###### fBodyAccJerkstdX, numeric  
-   Mean value for fBodyAccJerkstdX
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccJerkstdX  
 
 ###### fBodyAccJerkstdY, numeric  
-   Mean value for fBodyAccJerkstdY
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccJerkstdY  
 
 ###### fBodyAccJerkstdZ, numeric  
-   Mean value for fBodyAccJerkstdZ
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccJerkstdZ  
 
 ###### fBodyAccJerkmeanFreqX, numeric  
-   Mean value for fBodyAccJerkmeanFreqX
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccJerkmeanFreqX  
 
 ###### fBodyAccJerkmeanFreqY, numeric  
-   Mean value for fBodyAccJerkmeanFreqY
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccJerkmeanFreqY  
 
 ###### fBodyAccJerkmeanFreqZ, numeric  
-   Mean value for fBodyAccJerkmeanFreqZ
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccJerkmeanFreqZ  
 
 ###### fBodyGyromeanX, numeric  
-   Mean value for fBodyGyromeanX
+&nbsp;&nbsp;&nbsp; Mean value for fBodyGyromeanX  
 
 ###### fBodyGyromeanY, numeric  
-   Mean value for fBodyGyromeanY
+&nbsp;&nbsp;&nbsp; Mean value for fBodyGyromeanY  
 
 ###### fBodyGyromeanZ, numeric  
-   Mean value for fBodyGyromeanZ
+&nbsp;&nbsp;&nbsp; Mean value for fBodyGyromeanZ  
 
 ###### fBodyGyrostdX, numeric  
-   Mean value for fBodyGyrostdX
+&nbsp;&nbsp;&nbsp; Mean value for fBodyGyrostdX  
 
 ###### fBodyGyrostdY, numeric  
-   Mean value for fBodyGyrostdY
+&nbsp;&nbsp;&nbsp; Mean value for fBodyGyrostdY  
 
 ###### fBodyGyrostdZ, numeric  
-   Mean value for fBodyGyrostdZ
+&nbsp;&nbsp;&nbsp; Mean value for fBodyGyrostdZ  
 
 ###### fBodyGyromeanFreqX, numeric  
-   Mean value for fBodyGyromeanFreqX
+&nbsp;&nbsp;&nbsp; Mean value for fBodyGyromeanFreqX  
 
 ###### fBodyGyromeanFreqY, numeric  
-   Mean value for fBodyGyromeanFreqY
+&nbsp;&nbsp;&nbsp; Mean value for fBodyGyromeanFreqY  
 
 ###### fBodyGyromeanFreqZ, numeric  
-   Mean value for fBodyGyromeanFreqZ
+&nbsp;&nbsp;&nbsp; Mean value for fBodyGyromeanFreqZ  
 
 ###### fBodyAccMagmean, numeric  
-   Mean value for fBodyAccMagmean
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccMagmean  
 
 ###### fBodyAccMagstd, numeric  
-   Mean value for fBodyAccMagstd
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccMagstd  
 
 ###### fBodyAccMagmeanFreq, numeric  
-   Mean value for fBodyAccMagmeanFreq
+&nbsp;&nbsp;&nbsp; Mean value for fBodyAccMagmeanFreq  
 
 ###### fBodyBodyAccJerkMagmean, numeric  
-   Mean value for fBodyBodyAccJerkMagmean
+&nbsp;&nbsp;&nbsp; Mean value for fBodyBodyAccJerkMagmean  
 
 ###### fBodyBodyAccJerkMagstd, numeric  
-   Mean value for fBodyBodyAccJerkMagstd
+&nbsp;&nbsp;&nbsp; Mean value for fBodyBodyAccJerkMagstd  
 
 ###### fBodyBodyAccJerkMagmeanFreq, numeric  
-   Mean value for fBodyBodyAccJerkMagmeanFreq
+&nbsp;&nbsp;&nbsp; Mean value for fBodyBodyAccJerkMagmeanFreq  
 
 ###### fBodyBodyGyroMagmean, numeric  
-   Mean value for fBodyBodyGyroMagmean
+&nbsp;&nbsp;&nbsp; Mean value for fBodyBodyGyroMagmean  
 
 ###### fBodyBodyGyroMagstd, numeric  
-   Mean value for fBodyBodyGyroMagstd
+&nbsp;&nbsp;&nbsp; Mean value for fBodyBodyGyroMagstd  
 
 ###### fBodyBodyGyroMagmeanFreq, numeric  
-   Mean value for fBodyBodyGyroMagmeanFreq
+&nbsp;&nbsp;&nbsp; Mean value for fBodyBodyGyroMagmeanFreq  
 
 ###### fBodyBodyGyroJerkMagmean, numeric  
-   Mean value for fBodyBodyGyroJerkMagmean
+&nbsp;&nbsp;&nbsp; Mean value for fBodyBodyGyroJerkMagmean  
 
-###### fBodyBodyGyroJerkMagstd, 
-   numeric  Mean value for fBodyBodyGyroJerkMagstd
+###### fBodyBodyGyroJerkMagstd, numeric  
+&nbsp;&nbsp;&nbsp; Mean value for fBodyBodyGyroJerkMagstd  
 
-###### fBodyBodyGyroJerkMagmeanFreq, 
-   numeric  Mean value for fBodyBodyGyroJerkMagmeanFreq
-
+###### fBodyBodyGyroJerkMagmeanFreq, numeric  
+  Mean value for fBodyBodyGyroJerkMagmeanFreq  
