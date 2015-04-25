@@ -5,39 +5,40 @@ The raw data is located here:
 
     https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 	
-The script run_analysis.R creates the TXT file tidy.txt.  
-The script does the following:  
-1. Imports the variable names, activities (names and numbers), and subject numbers.
-2. Imports in the X_test.txt and X_train.txt data adding column names
-3. Binds the activities (names and numbers) and subject numbers to the data
-4. Binds the test and train data together and selects only the mean or standard deviation columns
-5. Computes the means of each activity for each subjects and writes that to tidy.txt  
+There are 180 rows of data - one row for each subject (30 subjects) and type of activity (6 activities). The accelerometer data are summarized into 79 variables - the values of which are the means of the data for each subject and activity. 
+ 
+The data were created using an R script (run_analysis.R) to create a TXT file tidy.txt. The script does the following:  
+1. Imports the variable names, activities (names and numbers), and subject numbers 
+2. Imports in the X_test.txt and X_train.txt data adding column names 
+3. Binds the activities (names and numbers) and subject numbers to the data 
+4. Binds the test and train data together and selects only the mean or standard deviation columns 
+5. Computes the means of each activity for each subjects and writes that to tidy.txt 
 
 ##Variables
 
 ###### Subject, integer
-   subject number  
-   values from 1 to 30  
+&nbsp;&nbsp;&nbsp; subject number 
+&nbsp;&nbsp;&nbsp; values from 1 to 30 
 
-###### Activity, integer  
-   activity number <br>  
-   1 = Walking <br>  
-   2 = Walking up stairs <br>  
-   3 = Walking down stairs <br>  
-   4 = Sitting <br>  
-   5 = Standing <br>  
-   6 = Laying  
+###### Activity, integer
+&nbsp;&nbsp;&nbsp; activity number  
+&nbsp;&nbsp;&nbsp; 1 = Walking   
+&nbsp;&nbsp;&nbsp; 2 = Walking up stairs   
+&nbsp;&nbsp;&nbsp; 3 = Walking down stairs  
+&nbsp;&nbsp;&nbsp; 4 = Sitting  
+&nbsp;&nbsp;&nbsp; 5 = Standing   
+&nbsp;&nbsp;&nbsp; 6 = Laying
 
-###### ActivityName, character  
-   activity names <br>  
-   Walking <br>  
-   Walking up stairs <br>  
-   Walking down stairs <br>  
-   Sitting <br>  
-   Standing <br>  
-   Laying   
+###### ActivityName, character
+&nbsp;&nbsp;&nbsp; activity names  
+&nbsp;&nbsp;&nbsp; Walking  
+&nbsp;&nbsp;&nbsp; Walking up stairs  
+&nbsp;&nbsp;&nbsp; Walking down stairs  
+&nbsp;&nbsp;&nbsp; Sitting  
+&nbsp;&nbsp;&nbsp; Standing  
+&nbsp;&nbsp;&nbsp; Laying
 
-###### tBodyAccmeanX, numeric  
+###### tBodyAccmeanX, numeric
 &nbsp;&nbsp;&nbsp; Mean value for tBodyAccmeanX  
 
 ###### tBodyAccmeanY, numeric  
